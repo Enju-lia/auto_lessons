@@ -12,8 +12,11 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation group: 'org.testng', name: 'testng', version: '7.11.0'
+    implementation 'org.slf4j:slf4j-nop:2.0.7'
 }
 
 tasks.test {
-    useJUnitPlatform()
+    //useJUnitPlatform()
+    useTestNG()
 }
